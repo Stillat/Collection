@@ -48,8 +48,6 @@ As mentioned above, the `collect` helper returns a new `Illuminate\Support\Colle
 
     $collection = collect([1, 2, 3]);
 
-By default, collections of [Eloquent](/docs/{{version}}/eloquent) models are always returned as `Collection` instances; however, feel free to use the `Collection` class wherever it is convenient for your application.
-
 <a name="available-methods"></a>
 ## Available Methods
 
@@ -81,38 +79,11 @@ You may select any method from this table to see an example of its usage:
 | [implode](#method-implode) | [reverse](#method-reverse) | |
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <a name="method-listing"></a>
 ## Method Listing
 
-<style>
-    #collection-method code {
-        font-size: 14px;
-    }
-
-    #collection-method:not(.first-collection-method) {
-        margin-top: 50px;
-    }
-</style>
-
 <a name="method-all"></a>
-#### `all()` {#collection-method .first-collection-method}
+#### `all()`
 
 The `all` method simply returns the underlying array represented by the collection:
 
@@ -153,15 +124,6 @@ The `chunk` method breaks the collection into multiple, smaller collections of a
 
     // [[1, 2, 3, 4], [5, 6, 7]]
 
-This method is especially useful in [views](/docs/{{version}}/views) when working with a grid system such as [Bootstrap](http://getbootstrap.com/css/#grid). Imagine you have a collection of [Eloquent](/docs/{{version}}/eloquent) models you want to display in a grid:
-
-    @foreach ($products->chunk(3) as $chunk)
-        <div class="row">
-            @foreach ($chunk as $product)
-                <div class="col-xs-4">{{ $product->name }}</div>
-            @endforeach
-        </div>
-    @endforeach
 
 <a name="method-collapse"></a>
 #### `collapse()`
@@ -1084,7 +1046,7 @@ You may also pass a negative integer to take the specified amount of items from 
 <a name="method-toarray"></a>
 #### `toArray()`
 
-The `toArray` method converts the collection into a plain PHP `array`. If the collection's values are [Eloquent](/docs/{{version}}/eloquent) models, the models will also be converted to arrays:
+The `toArray` method converts the collection into a plain PHP `array`:
 
     $collection = collect(['name' => 'Desk', 'price' => 200]);
 
