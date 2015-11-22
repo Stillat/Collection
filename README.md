@@ -2,6 +2,18 @@
 
 This is a standalone version of Laravel's Collection class so you can use it in projects that do not necessarily require Laravel, but would benefit from it's Collection class.
 
+## Installing
+
+Install `stillat/collection` using Composer.
+
+```
+$ composer require stillat/collection
+```
+
+## When will updates be made?
+
+This repository will be updated when significant/major changes have been made to Laravel's collection classes. Think it should be updated? Open an issue.
+
 ## Can I contribute improvements/fixes?
 
 This repository is automagically generated using a script that involves a lot of black magic/sorcery. This script pulls the collection code base from the Laravel repository and "rewrites" it so it can be used by itself. Because of this, any modifications made to the code base in this repository would be overwritten whenever the script is ran. If you are still interested in contributing, consider contributing directly to [Laravel](https://github.com/laravel/framework).
