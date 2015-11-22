@@ -14,7 +14,7 @@
   },
   "autoload": {
     "files": [
-      "src/helpers.php"
+      "src/Collection/helpers.php"
     ],
     "psr-0": {
       "Collection": "src/"
