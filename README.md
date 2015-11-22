@@ -1,6 +1,13 @@
 # What is this?
 
-This is a standalone version of Laravel's Collection class so you can use it in projects that do not necessarily require Laravel, but would benefit from it's Collection class.
+This is Laravel's Collection helper class (PHP arrays on steroids) that has been pulled from Laravel that can be used all by itself. It doesn't contain any unneeded helper functions, extra classes or service providers. It is just the Collection class. In addition, it doesn't use the `Illuminate` namespace. Other than that, everything else is pretty much the same:
+
+    $collection = collect(['taylor', 'abigail', null])->map(function ($name) {
+        return strtoupper($name);
+    })
+    ->reject(function ($name) {
+        return empty($name);
+    });
 
 ## Installing
 
@@ -10,13 +17,7 @@ Install `stillat/collection` using Composer.
 $ composer require stillat/collection
 ```
 
-## When will updates be made?
-
-This repository will be updated when significant/major changes have been made to Laravel's collection classes. Think it should be updated? Open an issue.
-
-## Can I contribute improvements/fixes?
-
-This repository is automagically generated using a script that involves a lot of black magic/sorcery. This script pulls the collection code base from the Laravel repository and "rewrites" it so it can be used by itself. Because of this, any modifications made to the code base in this repository would be overwritten whenever the script is ran. If you are still interested in contributing, consider contributing directly to [Laravel](https://github.com/laravel/framework).
+After Composer does its thing, you should now have the collection helpers available for your project! Continue on to learn all about it.
 
 # Collections
 
@@ -25,6 +26,9 @@ This repository is automagically generated using a script that involves a lot of
 - [Introduction](#introduction)
 - [Creating Collections](#creating-collections)
 - [Available Methods](#available-methods)
+- [When will updates be made to this library?](#updates)
+- [Can I contribute improvements/fixes?](#howtocontribute)
+- [Motivation/Why is this a thing?](#motivation)
 
 <a name="introduction"></a>
 ## Introduction
@@ -1203,3 +1207,20 @@ The `zip` method merges together the values of the given array with the values o
     $zipped->all();
 
     // [['Chair', 100], ['Desk', 200]]
+
+<a name="updates"></a>
+## When will updates be made?
+
+This repository will be updated when significant/major changes have been made to Laravel's collection classes. Think it should be updated? Open an issue.
+
+<a name="howtocontribute"></a>
+## Can I contribute improvements/fixes?
+
+This repository is automagically generated using a script that involves a lot of black magic/sorcery. This script pulls the collection code from the Laravel repository and "rewrites" it so it can be used by itself. Because of this, any modifications made to the code in this repository would be overwritten whenever the script is ran. If you are still interested in contributing, consider contributing directly to [Laravel](https://github.com/laravel/framework).
+
+<a name="motivation"></a>
+## Motivation/Why is this a thing?
+
+The `Collection` helper class is *extremely* useful and it might as well be its own Composer package (because why not?). But mainly this was an experiment to see if I could create a little script to automatically generate the code seen in this repository from the code in the Laravel repository.
+
+However, because the `Collection` helper class is so useful, I am sure someone will find value in this little library.
