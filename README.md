@@ -46,7 +46,7 @@ For the remainder of this documentation, we'll discuss each method available on 
 You may select any method from this table to see an example of its usage:
 
 | Method | ... | ... |
-|--|--|--|
+|---|---|---|
 | [all](#method-all) | [intersect](#method-intersect) | [search](#method-search) |
 | [avg](#method-avg) | [isEmpty](#method-isempty) | [shift](#method-shift) |
 | [chunk](#method-chunk) | [keyBy](#method-keyby) | [shuffle](#method-shuffle) |
