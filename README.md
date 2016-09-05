@@ -1,3 +1,7 @@
+# __IMPORTANT__: No Longer Maintained
+
+This repository is no longer maintained. However, you should totally check out a similar effort over at https://github.com/tightenco/collect (it's what I am going to be using).
+
 # What is this?
 
 This is Laravel's Collection helper class (PHP arrays on steroids) that has been pulled from Laravel that can be used all by itself. It doesn't contain any unneeded helper functions, extra classes or service providers. It is just the Collection class. In addition, it doesn't use the `Illuminate` namespace. Other than that, everything else is pretty much the same:
